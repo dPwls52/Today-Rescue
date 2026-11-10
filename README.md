@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Today-Rescue
 
-## Getting Started
+## 🚑 오늘구조대 frontend code space (LikeLion 4호선톤)
 
-First, run the development server:
+## 🛠 Tech Stack
+
+- React + Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install   # 처음 한 번만
+npm run dev   # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Folder Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+today-rescue
+├─ .github/          # 이슈 / PR 템플릿
+├─ public/           # 정적 파일 (이미지, 아이콘 등)
+└─ src/
+   ├─ app/           # 페이지 & 라우팅 (page.tsx, layout.tsx)
+   ├─ assets/        # 이미지, 폰트 등 import 해서 쓰는 리소스
+   ├─ components/    # 재사용 UI 컴포넌트
+   ├─ hooks/         # 커스텀 훅
+   ├─ lib/           # API 호출, 유틸 함수
+   └─ types/         # 공통 타입 정의
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **🎯 Git Convention**
 
-## Learn More
+- 🎉 **Start:** Start New Project [:tada:]
+- ✨ **Feat:** 새로운 기능을 추가 [:sparkles:]
+- 🐛 **Fix:** 버그 수정 [:bug:]
+- 🎨 **Design:** CSS 등 사용자 UI 디자인 변경 [:art:]
+- ♻️ **Refactor:** 코드 리팩토링 [:recycle:]
+- 🔧 **Settings:** Changing configuration files [:wrench:]
+- 🗃️ **Comment:** 필요한 주석 추가 및 변경 [:card_file_box:]
+- ➕ **Dependency/Plugin:** Add a dependency/plugin [:heavy_plus_sign:]
+- 📝 **Docs:** 문서 수정 [:memo:]
+- 🔀 **Merge:** Merge branches [:twisted_rightwards_arrows:]
+- 🚀 **Deploy:** Deploying stuff [:rocket:]
+- 🚚 **Rename:** 파일 혹은 폴더명을 수정하거나 옮기는 작업만인 경우 [:truck:]
+- 🔥 **Remove:** 파일을 삭제하는 작업만 수행한 경우 [:fire:]
+- ⏪ **Revert:** 전 버전으로 롤백 [:rewind:]
 
-To learn more about Next.js, take a look at the following resources:
+## 🌲 Branch Convention
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`main`**: 배포 가능한 브랜치, 항상 배포 가능한 상태를 유지
+- **`develop`**: 다음 버전을 위한 개발 브랜치, 팀원들의 작업 결과물이 모이는 '중심점'
+- **`ui/#이슈번호/명칭`**: 화면 UI 구현이나 스타일링 작업을 할 때 사용
+  - _예: `ui/#12/login-form`_
+- **`api/#이슈번호/명칭`**: 데이터 통신, API 연동, 비즈니스 로직 구현 시 사용
+  - _예: `api/#45/fetch-user-profile`_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌊 Flow
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Issue 생성
+2. 최신 상태의 **`develop`** 에서 새 브랜치 생성
+3. 작업 완료 후 **`develop`** 으로 Pull Request
+4. 팀원들에게 리뷰 요청
+5. 리뷰한 팀원이 **`develop`** 으로 병합
+6. 병합 후 작업자가 해당 브랜치 삭제
